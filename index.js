@@ -24,6 +24,7 @@ const server = http.createServer((req, res) => {
         req.on('end', () => {
             try {
                 const data = JSON.parse(body)
+                console.log('Items ricevuti:', data.items.length)
                 ahdbItems = data.items
                 lastSync = new Date(data.timestamp)
                 console.log(`Sync ricevuto: ${ahdbItems.length} items`)
