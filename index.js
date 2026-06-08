@@ -1,11 +1,13 @@
 import axios from 'axios'
+import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
-import { parseAHDB } from './parseAHDB.js'
-
-const AHDB_PATH = 'C:\\Program Files (x86)\\World of Warcraft\\_classic_era_\\WTF\\Account\\102363894#2\\SavedVariables\\AuctionDB.lua'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
+
+// Database in memoria
+let ahdbItems = []
+let lastSync = null
 
 function copperToGold(copper) {
     const gold = Math.floor(copper / 10000)
@@ -13,6 +15,32 @@ function copperToGold(copper) {
     const cop = copper % 100
     return `${gold}g ${silver}s ${cop}c`
 }
+
+// Server HTTP
+const server = http.createServer((req, res) => {
+    if (req.method === 'POST' && req.url === '/sync') {
+        let body = ''
+        req.on('data', chunk => { body += chunk })
+        req.on('end', () => {
+            try {
+                const data = JSON.parse(body)
+                ahdbItems = data.items
+                lastSync = new Date(data.timestamp)
+                console.log(`Sync ricevuto: ${ahdbItems.length} items`)
+                res.writeHead(200)
+                res.end('ok')
+            } catch (err) {
+                res.writeHead(400)
+                res.end('error')
+            }
+        })
+    } else {
+        res.writeHead(200)
+        res.end('ok')
+    }
+})
+
+server.listen(process.env.PORT || 3000)
 
 // Bot commands
 
@@ -25,16 +53,24 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
     const itemName = match[1]
     try {
         bot.sendMessage(chatID, 'Sto cercando...')
-        const items = parseAHDB(AHDB_PATH)
-        const item = items.find(i => i.name.toLowerCase() === itemName.toLowerCase())
-        if (!item) {
-            bot.sendMessage(chatID, `❌ Item "${itemName}" non trovato nella scan AHDB.`)
+
+        if (ahdbItems.length === 0) {
+            bot.sendMessage(chatID, '❌ Nessun dato disponibile. Esegui prima il sync locale.')
             return
         }
+
+        const item = ahdbItems.find(i => i.name.toLowerCase() === itemName.toLowerCase())
+        if (!item) {
+            bot.sendMessage(chatID, `❌ Item "${itemName}" non trovato.`)
+            return
+        }
+
+        const syncTime = lastSync ? `🕐 _Scan: ${lastSync.toLocaleString('it-IT')}_` : ''
         bot.sendMessage(chatID,
             `📦 *${item.name}*\n` +
             `💰 Min Buyout: ${copperToGold(item.price)}\n` +
-            `🔢 Quantità: ${item.quantity}`,
+            `🔢 Quantità: ${item.quantity}\n` +
+            syncTime,
             { parse_mode: 'Markdown' }
         )
     } catch (err) {
