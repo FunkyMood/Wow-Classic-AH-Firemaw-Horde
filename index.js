@@ -1,7 +1,7 @@
 import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
-import { Utility } from './utilities'
+import { Utility } from './utilities.js'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
 
