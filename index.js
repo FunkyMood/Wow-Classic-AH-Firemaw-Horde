@@ -1,4 +1,3 @@
-import axios from 'axios'
 import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'

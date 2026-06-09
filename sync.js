@@ -5,7 +5,7 @@ const AHDB_PATH = 'C:\\Program Files (x86)\\World of Warcraft\\_classic_era_\\WT
 const RAILWAY_URL = 'https://wow-classic-ah-firemaw-horde.onrender.com/sync'
 
 const items = parseAHDB(AHDB_PATH)
-console.log(`Trovati ${items.length} items`)
+
 
 await axios.post(RAILWAY_URL, {
     items,
