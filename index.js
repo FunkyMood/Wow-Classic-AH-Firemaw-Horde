@@ -1,6 +1,7 @@
 import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
+import { Utility } from './utilities'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
 
@@ -52,8 +53,6 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
     const chatID = msg.chat.id
     const itemName = match[1]
     try {
-        bot.sendMessage(chatID, 'Sto cercando...')
-
         if (ahdbItems.length === 0) {
             bot.sendMessage(chatID, '❌ Nessun dato disponibile. Esegui prima il sync locale.')
             return
@@ -65,12 +64,11 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
             return
         }
 
-        const syncTime = lastSync ? `🕐 _Scan: ${lastSync.toLocaleString('it-IT')}_` : ''
         bot.sendMessage(chatID,
             `📦 *${item.name}*\n` +
             `💰 Min Buyout: ${copperToGold(item.price)}\n` +
             `🔢 Quantità: ${item.quantity}\n` +
-            syncTime,
+            `🕐 _Scan:${Utility.getSyncTimeLabel(lastSync)}`,
             { parse_mode: 'Markdown' }
         )
     } catch (err) {
