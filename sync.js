@@ -7,9 +7,12 @@ const RAILWAY_URL = 'https://wow-classic-ah-firemaw-horde.onrender.com/sync'
 const items = parseAHDB(AHDB_PATH)
 
 
-await axios.post(RAILWAY_URL, {
-    items,
-    timestamp: Date.now()
-})
-
-console.log('Sync completato!')
+try {
+    await axios.post(RAILWAY_URL, {
+        items,
+        timestamp: Date.now()
+    })
+    console.log('Sync completato!')
+} catch (err) {
+    console.log('ERRORE sync:', err.message)
+}
