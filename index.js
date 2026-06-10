@@ -2,17 +2,19 @@ import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { Utility } from './utilities.js'
+import fs from 'fs'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
+const CACHE_PATH = './cache.json'
 
 let ahdbItems = []
 let lastSync = null
 
-function copperToGold(copper) {
-    const gold = Math.floor(copper / 10000)
-    const silver = Math.floor((copper % 10000) / 100)
-    const cop = copper % 100
-    return `${gold}g ${silver}s ${cop}c`
+if (fs.existsSync(CACHE_PATH)) {
+    const cache = JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8'))
+    ahdbItems = cache.items
+    lastSync = new Date(cache.timestamp)
+    console.log(`Cache caricata: ${ahdbItems.length} items`)
 }
 
 const server = http.createServer((req, res) => {
@@ -22,9 +24,9 @@ const server = http.createServer((req, res) => {
         req.on('end', () => {
             try {
                 const data = JSON.parse(body)
-                console.log('Items ricevuti:', data.items.length)
                 ahdbItems = data.items
                 lastSync = new Date(data.timestamp)
+                fs.writeFileSync(CACHE_PATH, JSON.stringify({ items: data.items, timestamp: data.timestamp }))
                 console.log(`Sync ricevuto: ${ahdbItems.length} items`)
                 res.writeHead(200)
                 res.end('ok')
@@ -40,7 +42,6 @@ const server = http.createServer((req, res) => {
 })
 
 server.listen(process.env.PORT || 3000)
-
 
 bot.onText(/\/ping/, (msg) => {
     bot.sendMessage(msg.chat.id, '🟢 Bot online!')
@@ -63,9 +64,9 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
 
         bot.sendMessage(chatID,
             `📦 ${item.name}\n` +
-            `💰 Min Buyout: ${copperToGold(item.price)}\n` +
+            `💰 Min Buyout: ${Utility.copperToGold(item.price)}\n` +
             `🔢 Quantità: ${item.quantity}\n` +
-            `🕐 Scan: ${Utility.getSyncTimeLabel(lastSync)}`
+            `${Utility.getSyncTimeLabel(lastSync)}`
         )
     } catch (err) {
         console.log('ERRORE:', err.message)
