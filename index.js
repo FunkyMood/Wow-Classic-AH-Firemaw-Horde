@@ -48,11 +48,11 @@ server.listen(process.env.PORT || 3000)
 
 bot.onText(/\/help/, (msg) => {
     bot.sendMessage(msg.chat.id,
-        `📖 Comandi disponibili:\n\n` +
-        `/price <nome item> — Cerca il prezzo esatto o mostra suggerimenti\n` +
-        `Esempio: /price Linen Cloth\n` +
-        `Esempio: /price cloth (mostra tutti i cloth)\n\n` +
-        `/ping — Controlla se il bot è online`
+        `📖 Available commands:\n\n` +
+        `/price <item name> — Search for exact price or show suggestions\n` +
+        `Example: /price Linen Cloth\n` +
+        `Example: /price cloth (shows all cloth items)\n\n` +
+        `/ping — Check if the bot is online`
     )
 })
 
@@ -78,7 +78,7 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
             bot.sendMessage(chatID,
                 `📦 ${item.name}\n` +
                 `💰 Min Buyout: ${Utility.copperToGold(item.price)}\n` +
-                `🔢 Quantità: ${item.quantity}\n` +
+                `🔢 Quantity: ${item.quantity}\n` +
                 `${Utility.getSyncTimeLabel(new Date(item.last_sync))}`
             )
             return
@@ -93,7 +93,7 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
         if (partialError) throw partialError
 
         if (!partialData || partialData.length === 0) {
-            bot.sendMessage(chatID, `❌ Nessun item trovato per "${itemName}".`)
+            bot.sendMessage(chatID, `❌ No items found for "${itemName}".`)
             return
         }
 
@@ -102,15 +102,15 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
             callback_data: `price_${item.item_id}`
         }]))
 
-        bot.sendMessage(chatID, `🔍 Risultati per "${itemName}":`, {
+        bot.sendMessage(chatID, `🔍 Results for "${itemName}":`, {
             reply_markup: {
                 inline_keyboard: buttons
             }
         })
 
     } catch (err) {
-        console.log('ERRORE:', err.message)
-        bot.sendMessage(chatID, `❌ Errore: ${err.message}`)
+        console.log('ERROR:', err.message)
+        bot.sendMessage(chatID, `❌ Error: ${err.message}`)
     }
 })
 
@@ -131,12 +131,12 @@ bot.on('callback_query', async (query) => {
         bot.sendMessage(chatID,
             `📦 ${item.name}\n` +
             `💰 Min Buyout: ${Utility.copperToGold(item.price)}\n` +
-            `🔢 Quantità: ${item.quantity}\n` +
+            `🔢 Quantity: ${item.quantity}\n` +
             `${Utility.getSyncTimeLabel(new Date(item.last_sync))}`
         )
         bot.answerCallbackQuery(query.id)
     } catch (err) {
-        console.log('ERRORE:', err.message)
-        bot.answerCallbackQuery(query.id, { text: 'Errore!' })
+        console.log('ERROR:', err.message)
+        bot.answerCallbackQuery(query.id, { text: 'Error!' })
     }
 })
