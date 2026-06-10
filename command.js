@@ -102,19 +102,42 @@ export function registerCommands(bot, supabase) {
                 .from('items')
                 .select('name, item_id, price, quantity')
                 .eq('category', category)
-                .order('price', { ascending: true })
-                .limit(5)
+                .gt('price', 0)
 
             if (error) {
                 bot.answerCallbackQuery(query.id, { text: 'Error!' })
                 return
             }
 
-            const message = data.map(item =>
-                `📦 ${item.name}\n💰 ${Utility.copperToGold(item.price)} — 🔢 ${item.quantity}`
+            if (!data || data.length === 0) {
+                bot.sendMessage(chatID, `❌ No items found in category "${category}".`)
+                bot.answerCallbackQuery(query.id)
+                return
+            }
+
+            const prices = data.map(i => i.price).sort((a, b) => a - b)
+            const mid = Math.floor(prices.length / 2)
+            const median = prices.length % 2 !== 0
+                ? prices[mid]
+                : (prices[mid - 1] + prices[mid]) / 2
+
+            const threshold = median * 3
+            const filtered = data
+                .filter(i => i.price <= threshold)
+                .sort((a, b) => b.price - a.price)
+                .slice(0, 5)
+
+            if (filtered.length === 0) {
+                bot.sendMessage(chatID, `❌ No valid items found in category "${category}".`)
+                bot.answerCallbackQuery(query.id)
+                return
+            }
+
+            const message = filtered.map((item, index) =>
+                `${index + 1}. ${item.name}\n💰 ${Utility.copperToGold(item.price)} — 🔢 ${item.quantity}`
             ).join('\n\n')
 
-            bot.sendMessage(chatID, `🏷️ Top 5 cheapest in ${category}:\n\n${message}`)
+            bot.sendMessage(chatID, `🏆 Top 5 most valuable in ${category}:\n\n${message}`)
             bot.answerCallbackQuery(query.id)
             return
         }
