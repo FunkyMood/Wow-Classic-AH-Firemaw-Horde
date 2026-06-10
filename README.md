@@ -66,7 +66,7 @@ Create a `.env` file in the project root:
 TELEGRAM_TOKEN=your_telegram_bot_token
 SUPABASE_URL=https://xxxx.supabase.co
 SUPABASE_KEY=your_supabase_secret_key
-AHDB_PATH=C:\Program Files (x86)\World of Warcraft_classic_era_\WTF\Account\YOURACCOUNT\SavedVariables\AuctionDB.lua
+AHDB_PATH="C:\Program Files (x86)\World of Warcraft_classic_era_\WTF\Account\YOURACCOUNT\SavedVariables\AuctionDB.lua"
 
 ### Supabase setup
 
