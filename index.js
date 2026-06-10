@@ -2,20 +2,11 @@ import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { Utility } from './utilities.js'
-import fs from 'fs'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
-const CACHE_PATH = './cache.json'
 
 let ahdbItems = []
 let lastSync = null
-
-if (fs.existsSync(CACHE_PATH)) {
-    const cache = JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8'))
-    ahdbItems = cache.items
-    lastSync = new Date(cache.timestamp)
-    console.log(`Cache caricata: ${ahdbItems.length} items`)
-}
 
 const server = http.createServer((req, res) => {
     if (req.method === 'POST' && req.url === '/sync') {
@@ -26,7 +17,6 @@ const server = http.createServer((req, res) => {
                 const data = JSON.parse(body)
                 ahdbItems = data.items
                 lastSync = new Date(data.timestamp)
-                fs.writeFileSync(CACHE_PATH, JSON.stringify({ items: data.items, timestamp: data.timestamp }))
                 console.log(`Sync ricevuto: ${ahdbItems.length} items`)
                 res.writeHead(200)
                 res.end('ok')
@@ -43,7 +33,6 @@ const server = http.createServer((req, res) => {
 
 server.listen(process.env.PORT || 3000)
 
-
 bot.onText(/\/help/, (msg) => {
     bot.sendMessage(msg.chat.id,
         `📖 Comandi disponibili:\n\n` +
@@ -52,7 +41,6 @@ bot.onText(/\/help/, (msg) => {
         `/ping — Controlla se il bot è online`
     )
 })
-
 
 bot.onText(/\/ping/, (msg) => {
     bot.sendMessage(msg.chat.id, '🟢 Bot online!')
