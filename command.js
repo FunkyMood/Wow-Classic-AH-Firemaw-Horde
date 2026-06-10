@@ -96,12 +96,42 @@ export function registerCommands(bot, supabase) {
     bot.on('callback_query', async (query) => {
         const chatID = query.message.chat.id
 
-        if (query.data.startsWith('browse_')) {
+        if (query.data.startsWith('browse_') && !query.data.includes('_lvl_')) {
             const category = query.data.replace('browse_', '')
+
+            const levelRanges = [
+                { label: '1-9', min: 1, max: 9 },
+                { label: '10-19', min: 10, max: 19 },
+                { label: '20-29', min: 20, max: 29 },
+                { label: '30-39', min: 30, max: 39 },
+                { label: '40-49', min: 40, max: 49 },
+                { label: '50-59', min: 50, max: 59 },
+                { label: '60', min: 60, max: 60 },
+            ]
+
+            const buttons = levelRanges.map(range => ([{
+                text: `Level ${range.label}`,
+                callback_data: `browse_${category}_lvl_${range.min}_${range.max}`
+            }]))
+
+            bot.sendMessage(chatID, `⚔️ Select a level range for ${category}:`, {
+                reply_markup: { inline_keyboard: buttons }
+            })
+            bot.answerCallbackQuery(query.id)
+            return
+        }
+
+        if (query.data.startsWith('browse_') && query.data.includes('_lvl_')) {
+            const parts = query.data.split('_lvl_')
+            const category = parts[0].replace('browse_', '')
+            const [minLevel, maxLevel] = parts[1].split('_').map(Number)
+
             const { data, error } = await supabase
                 .from('items')
                 .select('name, item_id, price, quantity')
                 .eq('category', category)
+                .gte('required_level', minLevel)
+                .lte('required_level', maxLevel)
                 .gt('price', 0)
 
             if (error) {
@@ -110,7 +140,7 @@ export function registerCommands(bot, supabase) {
             }
 
             if (!data || data.length === 0) {
-                bot.sendMessage(chatID, `❌ No items found in category "${category}".`)
+                bot.sendMessage(chatID, `❌ No items found in ${category} for level ${minLevel}-${maxLevel}.`)
                 bot.answerCallbackQuery(query.id)
                 return
             }
@@ -128,7 +158,7 @@ export function registerCommands(bot, supabase) {
                 .slice(0, 5)
 
             if (filtered.length === 0) {
-                bot.sendMessage(chatID, `❌ No valid items found in category "${category}".`)
+                bot.sendMessage(chatID, `❌ No valid items found.`)
                 bot.answerCallbackQuery(query.id)
                 return
             }
@@ -137,7 +167,7 @@ export function registerCommands(bot, supabase) {
                 `${index + 1}. ${item.name}\n💰 ${Utility.copperToGold(item.price)} — 🔢 ${item.quantity}`
             ).join('\n\n')
 
-            bot.sendMessage(chatID, `🏆 Top 5 most valuable in ${category}:\n\n${message}`)
+            bot.sendMessage(chatID, `🏆 Top 5 in ${category} (Level ${minLevel}-${maxLevel}):\n\n${message}`)
             bot.answerCallbackQuery(query.id)
             return
         }
