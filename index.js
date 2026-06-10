@@ -5,7 +5,6 @@ import { Utility } from './utilities.js'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
 
-// Database in memoria
 let ahdbItems = []
 let lastSync = null
 
@@ -16,7 +15,6 @@ function copperToGold(copper) {
     return `${gold}g ${silver}s ${cop}c`
 }
 
-// Server HTTP
 const server = http.createServer((req, res) => {
     if (req.method === 'POST' && req.url === '/sync') {
         let body = ''
@@ -43,7 +41,6 @@ const server = http.createServer((req, res) => {
 
 server.listen(process.env.PORT || 3000)
 
-// Bot commands
 
 bot.onText(/\/ping/, (msg) => {
     bot.sendMessage(msg.chat.id, '🟢 Bot online!')
@@ -65,11 +62,10 @@ bot.onText(/\/price (.+)/, async (msg, match) => {
         }
 
         bot.sendMessage(chatID,
-            `📦 *${item.name}*\n` +
+            `📦 ${item.name}\n` +
             `💰 Min Buyout: ${copperToGold(item.price)}\n` +
             `🔢 Quantità: ${item.quantity}\n` +
-            `🕐 _Scan:${Utility.getSyncTimeLabel(lastSync)}`,
-            { parse_mode: 'Markdown' }
+            `🕐 Scan: ${Utility.getSyncTimeLabel(lastSync)}`
         )
     } catch (err) {
         console.log('ERRORE:', err.message)
