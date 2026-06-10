@@ -29,11 +29,11 @@ const server = http.createServer((req, res) => {
                 const { error } = await supabase.from('items').insert(rows)
                 if (error) throw error
 
-                console.log(`Sync ricevuto: ${data.items.length} items`)
+                console.log(`Sync received: ${data.items.length} items`)
                 res.writeHead(200)
                 res.end('ok')
             } catch (err) {
-                console.log('ERRORE sync:', err.message)
+                console.log('ERROR sync:', err.message)
                 res.writeHead(400)
                 res.end('error')
             }
