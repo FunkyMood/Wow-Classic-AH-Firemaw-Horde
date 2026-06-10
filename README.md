@@ -62,3 +62,53 @@ npm install
 ### Environment variables
 
 Create a `.env` file in the project root:
+
+TELEGRAM_TOKEN=your_telegram_bot_token
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_KEY=your_supabase_secret_key
+AHDB_PATH=C:\Program Files (x86)\World of Warcraft_classic_era_\WTF\Account\YOURACCOUNT\SavedVariables\AuctionDB.lua
+
+### Supabase setup
+
+Create a table called `items` with the following columns:
+
+| Column | Type |
+|---|---|
+| id | int8 (primary key) |
+| item_id | int4 |
+| name | text |
+| price | int4 |
+| quantity | int4 |
+| last_sync | timestamptz |
+
+Make sure **Row Level Security (RLS)** is disabled on this table.
+
+## Syncing data
+
+After every AH scan with AHDB in-game:
+
+1. Leave the AH — WoW saves the data automatically to `AuctionDB.lua`
+2. Run the sync script:
+
+```bash
+node sync.js
+```
+
+Or use the `sync.bat` shortcut on your desktop (Windows only).
+
+The script reads `AuctionDB.lua`, parses all auction data, and uploads it to Supabase via Render.
+
+## Project structure
+
+├── index.js        # Telegram bot + HTTP server for sync endpoint
+├── sync.js         # Local script to parse and upload AH data
+├── parseAHDB.js    # Parser for AuctionDB.lua file format
+├── utilities.js    # Utility functions (copperToGold, getSyncTimeLabel)
+├── sync.bat        # Windows shortcut for quick sync from desktop
+└── .env            # Environment variables (never commit this file)
+
+## Notes
+
+- Prices reflect the state of the AH at the time of the last scan — more frequent scans mean more accurate data
+- The bot runs on Render free tier, kept alive by UptimeRobot pinging it every 5 minutes
+- Data persists on Supabase even after Render restarts or redeployments
