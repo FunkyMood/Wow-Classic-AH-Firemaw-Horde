@@ -26,7 +26,8 @@ const server = http.createServer((req, res) => {
                     price: item.price,
                     quantity: item.quantity,
                     last_sync: lastSync,
-                    category: item.category
+                    category: item.category,
+                    required_level: item.requiredLevel
                 }))
 
                 const { error } = await supabase.from('items').insert(rows)

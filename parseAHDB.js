@@ -1,4 +1,13 @@
 import fs from 'fs'
+import { Items } from 'wow-classic-items'
+
+const itemsDb = new Items()
+const itemLevels = {}
+
+
+for (const item of itemsDb) {
+    itemLevels[item.itemId] = item.requiredLevel || 0
+}
 
 const CATEGORIES = {
     0: 'Consumable',
@@ -35,9 +44,6 @@ export function parseAHDB(filePath) {
         }
     }
 
-    console.log('Categories found:', Object.keys(categories).length)
-    console.log('Category for 2589:', categories[2589])
-
     const ahStart = content.indexOf('"ah"] = {')
     if (ahStart === -1) return []
     const ahSection = content.substring(ahStart)
@@ -73,7 +79,8 @@ export function parseAHDB(filePath) {
                 price: Math.floor(minBuyoutPerUnit),
                 quantity: totalQuantity,
                 name: names[itemId] || `Item #${itemId}`,
-                category: categories[itemId] || 'Miscellaneous'
+                category: categories[itemId] || 'Miscellaneous',
+                requiredLevel: itemLevels[itemId] || 0
             }
         }
     }

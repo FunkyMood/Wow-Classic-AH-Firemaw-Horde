@@ -7,7 +7,7 @@ const RAILWAY_URL = 'https://wow-classic-ah-firemaw-horde.onrender.com/sync'
 
 const items = parseAHDB(AHDB_PATH)
 
-
+console.log('Sample item:', items.find(i => i.itemId === 12360))
 try {
     await axios.post(RAILWAY_URL, {
         items,
