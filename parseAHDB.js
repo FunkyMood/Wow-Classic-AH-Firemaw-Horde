@@ -1,17 +1,43 @@
 import fs from 'fs'
 
+const CATEGORIES = {
+    0: 'Consumable',
+    1: 'Container',
+    2: 'Weapon',
+    3: 'Gem',
+    4: 'Armor',
+    5: 'Reagent',
+    6: 'Projectile',
+    7: 'Trade Goods',
+    9: 'Recipe',
+    10: 'Currency',
+    11: 'Quiver',
+    12: 'Quest',
+    13: 'Key',
+    15: 'Miscellaneous'
+}
+
 export function parseAHDB(filePath) {
     const content = fs.readFileSync(filePath, 'utf8')
-
     const names = {}
+    const categories = {}
     const lines = content.split('\n')
     for (const line of lines) {
         const itemMatch = line.match(/i(\d+)[^"]*/)
         const nameMatch = line.match(/\[([^\]]+)\]\|h\|r/)
+        const categoryMatch = line.match(/"(\d+),\d+,(\d+)/)
         if (itemMatch && nameMatch) {
-            names[parseInt(itemMatch[1])] = nameMatch[1]
+            const id = parseInt(itemMatch[1])
+            names[id] = nameMatch[1]
+            if (categoryMatch) {
+                categories[id] = CATEGORIES[parseInt(categoryMatch[2])] || 'Miscellaneous'
+            }
         }
     }
+
+    console.log('Categories found:', Object.keys(categories).length)
+    console.log('Category for 2589:', categories[2589])
+
     const ahStart = content.indexOf('"ah"] = {')
     if (ahStart === -1) return []
     const ahSection = content.substring(ahStart)
@@ -46,7 +72,8 @@ export function parseAHDB(filePath) {
                 itemId,
                 price: Math.floor(minBuyoutPerUnit),
                 quantity: totalQuantity,
-                name: names[itemId] || `Item #${itemId}`
+                name: names[itemId] || `Item #${itemId}`,
+                category: categories[itemId] || 'Miscellaneous'
             }
         }
     }
