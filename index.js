@@ -43,6 +43,17 @@ const server = http.createServer((req, res) => {
 
 server.listen(process.env.PORT || 3000)
 
+
+bot.onText(/\/help/, (msg) => {
+    bot.sendMessage(msg.chat.id,
+        `📖 Comandi disponibili:\n\n` +
+        `/price <nome item> — Cerca il prezzo di un item\n` +
+        `Esempio: /price Linen Cloth\n\n` +
+        `/ping — Controlla se il bot è online`
+    )
+})
+
+
 bot.onText(/\/ping/, (msg) => {
     bot.sendMessage(msg.chat.id, '🟢 Bot online!')
 })
