@@ -2,7 +2,7 @@ import http from 'http'
 import 'dotenv/config'
 import TelegramBot from 'node-telegram-bot-api'
 import { createClient } from '@supabase/supabase-js'
-import { registerCommands } from './commands.js'
+import { registerCommands } from './command.js'
 
 const bot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true })
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY)
