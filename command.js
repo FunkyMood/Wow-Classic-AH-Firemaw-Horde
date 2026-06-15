@@ -1,4 +1,5 @@
 import { Utility } from './utilities.js'
+import fs from 'fs'
 
 export function registerCommands(bot, supabase) {
 
@@ -91,6 +92,35 @@ export function registerCommands(bot, supabase) {
         bot.sendMessage(chatID, '📂 Select a category:', {
             reply_markup: { inline_keyboard: buttons }
         })
+    })
+
+    bot.onText(/\/alchemist (\d+)/, async (msg, match) => {
+        const chatID = msg.chat.id
+        const level = parseInt(match[1])
+
+        const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
+
+        const categories = ['Battle Elixir', 'Guardian Elixir', 'Potion', 'Flask']
+        const icons = {
+            'Battle Elixir': '⚔️',
+            'Guardian Elixir': '🛡️',
+            'Potion': '🧪',
+            'Flask': '🔮'
+        }
+
+        const lines = categories.map(cat => {
+            const available = recipes
+                .filter(r => r.type === cat && r.requiredLevel <= level)
+                .sort((a, b) => b.requiredLevel - a.requiredLevel)
+            const best = available[0]
+            return best
+                ? `${icons[cat]} ${cat}: ${best.name} (lvl ${best.requiredLevel})`
+                : `${icons[cat]} ${cat}: none available`
+        })
+
+        bot.sendMessage(chatID,
+            `⚗️ Best consumables for level ${level}:\n\n${lines.join('\n')}`
+        )
     })
 
     bot.on('callback_query', async (query) => {
