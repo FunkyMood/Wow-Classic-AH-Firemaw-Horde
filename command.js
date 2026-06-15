@@ -110,7 +110,7 @@ export function registerCommands(bot, supabase) {
         }
 
         const results = [
-            { icon: '⚔️', label: 'Battle Elixir', item: getBest(r => r.type === 'Battle Elixir') },
+            { icon: '⚔️', label: 'Battle Elixir', item: getBest(r => r.type === 'Battle Elixir' && r.name !== 'Elixir of Giant Growth') },
             { icon: '🛡️', label: 'Guardian Elixir', item: getBest(r => r.type === 'Guardian Elixir') },
             { icon: '❤️', label: 'Healing Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('healing')) },
             { icon: '💙', label: 'Mana Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('mana')) },
