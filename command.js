@@ -10,7 +10,9 @@ export function registerCommands(bot, supabase) {
             `Example: /price Linen Cloth\n` +
             `Example: /price cloth (shows all cloth items)\n\n` +
             `/browse — Browse items by category\n\n` +
-            `/ping — Check if the bot is online`
+            `/ping — Check if the bot is online` +
+            `/alchemist <level> — Best potions and elixirs for your level\n` +
+            `Example: /alchemist 40\n\n`
         )
     })
 
@@ -100,27 +102,28 @@ export function registerCommands(bot, supabase) {
 
         const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
 
-        const categories = ['Battle Elixir', 'Guardian Elixir', 'Potion', 'Flask']
-        const icons = {
-            'Battle Elixir': '⚔️',
-            'Guardian Elixir': '🛡️',
-            'Potion': '🧪',
-            'Flask': '🔮'
+        const getBest = (filterFn) => {
+            const available = recipes
+                .filter(r => filterFn(r) && r.requiredLevel <= level)
+                .sort((a, b) => b.requiredLevel - a.requiredLevel)
+            return available[0] || null
         }
 
-        const lines = categories.map(cat => {
-            const available = recipes
-                .filter(r => r.type === cat && r.requiredLevel <= level)
-                .sort((a, b) => b.requiredLevel - a.requiredLevel)
-            const best = available[0]
-            return best
-                ? `${icons[cat]} ${cat}: ${best.name} (lvl ${best.requiredLevel})`
-                : `${icons[cat]} ${cat}: none available`
-        })
+        const results = [
+            { icon: '⚔️', label: 'Battle Elixir', item: getBest(r => r.type === 'Battle Elixir') },
+            { icon: '🛡️', label: 'Guardian Elixir', item: getBest(r => r.type === 'Guardian Elixir') },
+            { icon: '❤️', label: 'Healing Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('healing')) },
+            { icon: '💙', label: 'Mana Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('mana')) },
+            { icon: '🔮', label: 'Flask', item: getBest(r => r.type === 'Flask') },
+        ]
 
-        bot.sendMessage(chatID,
-            `⚗️ Best consumables for level ${level}:\n\n${lines.join('\n')}`
+        const lines = results.map(({ icon, label, item }) =>
+            item
+                ? `${icon} ${label}: ${item.name} (lvl ${item.requiredLevel})`
+                : `${icon} ${label}: none available`
         )
+
+        bot.sendMessage(chatID, `⚗️ Best consumables for level ${level}:\n\n${lines.join('\n')}`)
     })
 
     bot.on('callback_query', async (query) => {
