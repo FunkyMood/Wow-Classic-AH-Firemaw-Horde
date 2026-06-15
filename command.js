@@ -12,7 +12,9 @@ export function registerCommands(bot, supabase) {
             `/browse — Browse items by category\n\n` +
             `/ping — Check if the bot is online` +
             `/alchemist <level> — Best potions and elixirs for your level\n` +
-            `Example: /alchemist 40\n\n`
+            `Example: /alchemist 40\n\n` +
+            `/sharegold <Xg Ys> <players> — Split gold between players\n` +
+            `Example: /sharegold 49g 27s 4\n\n`
         )
     })
 
@@ -130,6 +132,35 @@ export function registerCommands(bot, supabase) {
         )
 
         bot.sendMessage(chatID, `⚗️ Best consumables for level ${level}:\n\n${lines.join('\n')}`)
+    })
+
+    bot.onText(/\/sharegold (\d+)g (\d+)s (\d+)/, (msg, match) => {
+        const chatID = msg.chat.id
+        const gold = parseInt(match[1])
+        const silver = parseInt(match[2])
+        const people = parseInt(match[3])
+
+        if (people <= 0) {
+            bot.sendMessage(chatID, '❌ Number of people must be greater than 0.')
+            return
+        }
+
+        const totalSilver = gold * 100 + silver
+        const perPerson = Math.floor(totalSilver / people)
+        const remainder = totalSilver - (perPerson * people)
+
+        const perPersonGold = Math.floor(perPerson / 100)
+        const perPersonSilver = perPerson % 100
+        const remainderGold = Math.floor(remainder / 100)
+        const remainderSilver = remainder % 100
+
+        let message = `💰 Split ${gold}g ${silver}s between ${people} people:\n\n`
+        message += `👤 Each person gets: ${perPersonGold}g ${perPersonSilver}s\n`
+        if (remainder > 0) {
+            message += `🏦 Remainder: ${remainderGold}g ${remainderSilver}s`
+        }
+
+        bot.sendMessage(chatID, message)
     })
 
     bot.on('callback_query', async (query) => {
