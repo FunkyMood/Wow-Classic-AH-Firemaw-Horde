@@ -110,11 +110,14 @@ export function registerCommands(bot, supabase) {
         }
 
         const results = [
-            { icon: '⚔️', label: 'Battle Elixir', item: getBest(r => r.type === 'Battle Elixir' && r.name !== 'Elixir of Giant Growth') },
-            { icon: '🛡️', label: 'Guardian Elixir', item: getBest(r => r.type === 'Guardian Elixir') },
+            { icon: '⚔️', label: 'Battle Elixir (melee)', item: getBest(r => r.type === 'Battle Elixir' && r.name !== 'Elixir of Giant Growth' && r.role === 'melee') },
+            { icon: '⚔️', label: 'Battle Elixir (spellcaster)', item: getBest(r => r.type === 'Battle Elixir' && r.role === 'spellcaster') },
+            { icon: '🛡️', label: 'Guardian Elixir (melee)', item: getBest(r => r.type === 'Guardian Elixir' && r.role === 'melee') },
+            { icon: '🛡️', label: 'Guardian Elixir (spellcaster)', item: getBest(r => r.type === 'Guardian Elixir' && r.role === 'spellcaster') },
             { icon: '❤️', label: 'Healing Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('healing')) },
             { icon: '💙', label: 'Mana Potion', item: getBest(r => r.type === 'Potion' && r.name.toLowerCase().includes('mana')) },
-            { icon: '🔮', label: 'Flask', item: getBest(r => r.type === 'Flask') },
+            { icon: '🔮', label: 'Flask (melee)', item: getBest(r => r.type === 'Flask' && r.role === 'melee') },
+            { icon: '🔮', label: 'Flask (spellcaster)', item: getBest(r => r.type === 'Flask' && r.role === 'spellcaster') },
         ]
 
         const lines = results.map(({ icon, label, item }) =>
