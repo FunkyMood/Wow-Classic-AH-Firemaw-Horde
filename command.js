@@ -105,7 +105,10 @@ export function registerCommands(bot, supabase) {
         const getBest = (filterFn) => {
             const available = recipes
                 .filter(r => filterFn(r) && r.requiredLevel <= level)
-                .sort((a, b) => b.requiredLevel - a.requiredLevel)
+                .sort((a, b) => {
+                    if (a.priority !== b.priority) return a.priority - b.priority
+                    return b.requiredLevel - a.requiredLevel
+                })
             return available[0] || null
         }
 

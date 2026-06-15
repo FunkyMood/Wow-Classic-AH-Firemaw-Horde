@@ -4,601 +4,687 @@
     "type": "Potion",
     "requiredLevel": 1,
     "skillRequired": 1,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Lesser Healing Potion",
     "type": "Potion",
     "requiredLevel": 3,
     "skillRequired": 55,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Healing Potion",
     "type": "Potion",
     "requiredLevel": 12,
     "skillRequired": 110,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Healing Potion",
     "type": "Potion",
     "requiredLevel": 21,
     "skillRequired": 155,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Superior Healing Potion",
     "type": "Potion",
     "requiredLevel": 35,
     "skillRequired": 215,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Major Healing Potion",
     "type": "Potion",
     "requiredLevel": 45,
     "skillRequired": 275,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Minor Mana Potion",
     "type": "Potion",
     "requiredLevel": 5,
     "skillRequired": 1,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Lesser Mana Potion",
     "type": "Potion",
     "requiredLevel": 14,
     "skillRequired": 120,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Mana Potion",
     "type": "Potion",
     "requiredLevel": 22,
     "skillRequired": 160,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Mana Potion",
     "type": "Potion",
     "requiredLevel": 31,
     "skillRequired": 205,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Superior Mana Potion",
     "type": "Potion",
     "requiredLevel": 41,
     "skillRequired": 260,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Major Mana Potion",
     "type": "Potion",
     "requiredLevel": 49,
     "skillRequired": 295,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Minor Rejuvenation Potion",
     "type": "Potion",
     "requiredLevel": 5,
     "skillRequired": 40,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Discolored Healing Potion",
     "type": "Potion",
     "requiredLevel": 5,
     "skillRequired": 50,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Swiftness Potion",
     "type": "Potion",
     "requiredLevel": 5,
     "skillRequired": 60,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Rage Potion",
     "type": "Potion",
     "requiredLevel": 4,
     "skillRequired": 60,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Holy Protection Potion",
     "type": "Potion",
     "requiredLevel": 10,
     "skillRequired": 100,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Shadow Protection Potion",
     "type": "Potion",
     "requiredLevel": 17,
     "skillRequired": 135,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Free Action Potion",
     "type": "Potion",
     "requiredLevel": 20,
     "skillRequired": 150,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Fire Protection Potion",
     "type": "Potion",
     "requiredLevel": 23,
     "skillRequired": 165,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Lesser Invisibility Potion",
     "type": "Potion",
     "requiredLevel": 23,
     "skillRequired": 165,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Frost Protection Potion",
     "type": "Potion",
     "requiredLevel": 28,
     "skillRequired": 190,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Nature Protection Potion",
     "type": "Potion",
     "requiredLevel": 28,
     "skillRequired": 190,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Great Rage Potion",
     "type": "Potion",
     "requiredLevel": 25,
     "skillRequired": 175,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Lesser Stoneshield Potion",
     "type": "Potion",
     "requiredLevel": 33,
     "skillRequired": 215,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Restorative Potion",
     "type": "Potion",
     "requiredLevel": 32,
     "skillRequired": 215,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Wildvine Potion",
     "type": "Potion",
     "requiredLevel": 35,
     "skillRequired": 225,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Dreamless Sleep Potion",
     "type": "Potion",
     "requiredLevel": 35,
     "skillRequired": 230,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Invisibility Potion",
     "type": "Potion",
     "requiredLevel": 37,
     "skillRequired": 235,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Gift of Arthas",
     "type": "Potion",
     "requiredLevel": 38,
     "skillRequired": 240,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Purification Potion",
     "type": "Potion",
     "requiredLevel": 47,
     "skillRequired": 285,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Limited Invulnerability Potion",
     "type": "Potion",
     "requiredLevel": 45,
     "skillRequired": 250,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Stoneshield Potion",
     "type": "Potion",
     "requiredLevel": 46,
     "skillRequired": 280,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Mighty Rage Potion",
     "type": "Potion",
     "requiredLevel": 46,
     "skillRequired": 255,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Fire Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Frost Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Nature Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Shadow Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Arcane Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Greater Holy Protection Potion",
     "type": "Potion",
     "requiredLevel": 48,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Major Troll's Blood Potion",
     "type": "Potion",
     "requiredLevel": 53,
     "skillRequired": 290,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Mageblood Potion",
     "type": "Potion",
     "requiredLevel": 40,
     "skillRequired": 275,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Greater Dreamless Sleep Potion",
     "type": "Potion",
     "requiredLevel": 55,
     "skillRequired": 275,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Major Rejuvenation Potion",
     "type": "Potion",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Living Action Potion",
     "type": "Potion",
     "requiredLevel": 47,
     "skillRequired": 285,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Elixir of Minor Defense",
     "type": "Guardian Elixir",
     "requiredLevel": 1,
     "skillRequired": 1,
-    "role": "melee"
+    "role": "melee",
+    "priority": 1
   },
   {
     "name": "Elixir of Minor Fortitude",
     "type": "Guardian Elixir",
     "requiredLevel": 2,
     "skillRequired": 50,
-    "role": "melee"
+    "role": "melee",
+    "priority": 3
   },
   {
     "name": "Weak Troll's Blood Elixir",
     "type": "Guardian Elixir",
     "requiredLevel": 1,
     "skillRequired": 15,
-    "role": "melee"
+    "role": "melee",
+    "priority": 2
   },
   {
     "name": "Elixir of Wisdom",
     "type": "Guardian Elixir",
     "requiredLevel": 10,
     "skillRequired": 90,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 3
   },
   {
     "name": "Strong Troll's Blood Elixir",
     "type": "Guardian Elixir",
     "requiredLevel": 15,
     "skillRequired": 125,
-    "role": "melee"
+    "role": "melee",
+    "priority": 2
   },
   {
     "name": "Elixir of Defense",
     "type": "Guardian Elixir",
     "requiredLevel": 16,
     "skillRequired": 130,
-    "role": "melee"
+    "role": "melee",
+    "priority": 1
   },
   {
     "name": "Elixir of Water Breathing",
     "type": "Guardian Elixir",
     "requiredLevel": 8,
     "skillRequired": 90,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Fortitude",
     "type": "Guardian Elixir",
     "requiredLevel": 25,
     "skillRequired": 175,
-    "role": "both"
+    "role": "both",
+    "priority": 3
   },
   {
     "name": "Catseye Elixir",
     "type": "Guardian Elixir",
     "requiredLevel": 30,
     "skillRequired": 200,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 5
   },
   {
     "name": "Elixir of Greater Defense",
     "type": "Guardian Elixir",
     "requiredLevel": 29,
     "skillRequired": 195,
-    "role": "melee"
+    "role": "melee",
+    "priority": 1
   },
   {
     "name": "Elixir of Greater Intellect",
     "type": "Guardian Elixir",
     "requiredLevel": 37,
     "skillRequired": 235,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 2
   },
   {
     "name": "Elixir of Greater Water Breathing",
     "type": "Guardian Elixir",
     "requiredLevel": 35,
     "skillRequired": 215,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Detect Lesser Invisibility",
     "type": "Guardian Elixir",
     "requiredLevel": 29,
     "skillRequired": 195,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Detect Undead",
     "type": "Guardian Elixir",
     "requiredLevel": 36,
     "skillRequired": 230,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Detect Demon",
     "type": "Guardian Elixir",
     "requiredLevel": 40,
     "skillRequired": 250,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Dream Vision",
     "type": "Guardian Elixir",
     "requiredLevel": 38,
     "skillRequired": 240,
-    "role": "both"
+    "role": "both",
+    "priority": 5
   },
   {
     "name": "Elixir of Superior Defense",
     "type": "Guardian Elixir",
     "requiredLevel": 43,
     "skillRequired": 265,
-    "role": "melee"
+    "role": "melee",
+    "priority": 1
   },
   {
     "name": "Elixir of the Sages",
     "type": "Guardian Elixir",
     "requiredLevel": 44,
     "skillRequired": 270,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 1
   },
   {
     "name": "Mighty Troll's Blood Elixir",
     "type": "Guardian Elixir",
     "requiredLevel": 26,
     "skillRequired": 300,
-    "role": "melee"
+    "role": "melee",
+    "priority": 2
   },
   {
     "name": "Elixir of Lion's Strength",
     "type": "Battle Elixir",
     "requiredLevel": 1,
     "skillRequired": 1,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Minor Agility",
     "type": "Battle Elixir",
     "requiredLevel": 2,
     "skillRequired": 50,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Giant Growth",
     "type": "Battle Elixir",
     "requiredLevel": 8,
     "skillRequired": 90,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Firepower",
     "type": "Battle Elixir",
     "requiredLevel": 18,
     "skillRequired": 140,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Elixir of Lesser Agility",
     "type": "Battle Elixir",
     "requiredLevel": 18,
     "skillRequired": 140,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Ogre's Strength",
     "type": "Battle Elixir",
     "requiredLevel": 20,
     "skillRequired": 150,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Agility",
     "type": "Battle Elixir",
     "requiredLevel": 27,
     "skillRequired": 185,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Frost Power",
     "type": "Battle Elixir",
     "requiredLevel": 28,
     "skillRequired": 190,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Arcane Elixir",
     "type": "Battle Elixir",
     "requiredLevel": 37,
     "skillRequired": 235,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Elixir of Greater Agility",
     "type": "Battle Elixir",
     "requiredLevel": 38,
     "skillRequired": 240,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Giants",
     "type": "Battle Elixir",
     "requiredLevel": 38,
     "skillRequired": 245,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Shadow Power",
     "type": "Battle Elixir",
     "requiredLevel": 40,
     "skillRequired": 250,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Elixir of Demonslaying",
     "type": "Battle Elixir",
     "requiredLevel": 40,
     "skillRequired": 250,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of Greater Firepower",
     "type": "Battle Elixir",
     "requiredLevel": 40,
     "skillRequired": 250,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Elixir of Brute Force",
     "type": "Battle Elixir",
     "requiredLevel": 45,
     "skillRequired": 275,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Elixir of the Mongoose",
     "type": "Battle Elixir",
     "requiredLevel": 46,
     "skillRequired": 280,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Greater Arcane Elixir",
     "type": "Battle Elixir",
     "requiredLevel": 47,
     "skillRequired": 285,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Flask of the Titans",
     "type": "Flask",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "melee"
+    "role": "melee",
+    "priority": 4
   },
   {
     "name": "Flask of Distilled Wisdom",
     "type": "Flask",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Flask of Supreme Power",
     "type": "Flask",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "spellcaster"
+    "role": "spellcaster",
+    "priority": 4
   },
   {
     "name": "Flask of Chromatic Resistance",
     "type": "Flask",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   },
   {
     "name": "Flask of Petrification",
     "type": "Flask",
     "requiredLevel": 50,
     "skillRequired": 300,
-    "role": "both"
+    "role": "both",
+    "priority": 4
   }
 ]
