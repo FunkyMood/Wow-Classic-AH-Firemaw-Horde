@@ -1,515 +1,21 @@
 [
   {
-    "name": "Minor Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 1,
-    "skillRequired": 1,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Lesser Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 3,
-    "skillRequired": 55,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 12,
-    "skillRequired": 110,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 21,
-    "skillRequired": 155,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Superior Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 35,
-    "skillRequired": 215,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Major Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 45,
-    "skillRequired": 275,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Minor Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 5,
-    "skillRequired": 1,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Lesser Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 14,
-    "skillRequired": 120,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 22,
-    "skillRequired": 160,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 31,
-    "skillRequired": 205,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Superior Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 41,
-    "skillRequired": 260,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Major Mana Potion",
-    "type": "Potion",
-    "requiredLevel": 49,
-    "skillRequired": 295,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Minor Rejuvenation Potion",
-    "type": "Potion",
-    "requiredLevel": 5,
-    "skillRequired": 40,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Discolored Healing Potion",
-    "type": "Potion",
-    "requiredLevel": 5,
-    "skillRequired": 50,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Swiftness Potion",
-    "type": "Potion",
-    "requiredLevel": 5,
-    "skillRequired": 60,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Rage Potion",
-    "type": "Potion",
-    "requiredLevel": 4,
-    "skillRequired": 60,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Holy Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 10,
-    "skillRequired": 100,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Shadow Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 17,
-    "skillRequired": 135,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Free Action Potion",
-    "type": "Potion",
-    "requiredLevel": 20,
-    "skillRequired": 150,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Fire Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 23,
-    "skillRequired": 165,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Lesser Invisibility Potion",
-    "type": "Potion",
-    "requiredLevel": 23,
-    "skillRequired": 165,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Frost Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 28,
-    "skillRequired": 190,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Nature Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 28,
-    "skillRequired": 190,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Great Rage Potion",
-    "type": "Potion",
-    "requiredLevel": 25,
-    "skillRequired": 175,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Lesser Stoneshield Potion",
-    "type": "Potion",
-    "requiredLevel": 33,
-    "skillRequired": 215,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Restorative Potion",
-    "type": "Potion",
-    "requiredLevel": 32,
-    "skillRequired": 215,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Wildvine Potion",
-    "type": "Potion",
-    "requiredLevel": 35,
-    "skillRequired": 225,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Dreamless Sleep Potion",
-    "type": "Potion",
-    "requiredLevel": 35,
-    "skillRequired": 230,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Invisibility Potion",
-    "type": "Potion",
-    "requiredLevel": 37,
-    "skillRequired": 235,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Gift of Arthas",
-    "type": "Potion",
-    "requiredLevel": 38,
-    "skillRequired": 240,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Purification Potion",
-    "type": "Potion",
-    "requiredLevel": 47,
-    "skillRequired": 285,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Limited Invulnerability Potion",
-    "type": "Potion",
-    "requiredLevel": 45,
-    "skillRequired": 250,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Stoneshield Potion",
-    "type": "Potion",
-    "requiredLevel": 46,
-    "skillRequired": 280,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Mighty Rage Potion",
-    "type": "Potion",
-    "requiredLevel": 46,
-    "skillRequired": 255,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Fire Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Frost Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Nature Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Shadow Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Arcane Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Greater Holy Protection Potion",
-    "type": "Potion",
-    "requiredLevel": 48,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Major Troll's Blood Potion",
-    "type": "Potion",
-    "requiredLevel": 53,
-    "skillRequired": 290,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Mageblood Potion",
-    "type": "Potion",
-    "requiredLevel": 40,
-    "skillRequired": 275,
-    "role": "spellcaster",
-    "priority": 4
-  },
-  {
-    "name": "Greater Dreamless Sleep Potion",
-    "type": "Potion",
-    "requiredLevel": 55,
-    "skillRequired": 275,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Major Rejuvenation Potion",
-    "type": "Potion",
-    "requiredLevel": 50,
-    "skillRequired": 300,
-    "role": "both",
-    "priority": 4
-  },
-  {
-    "name": "Living Action Potion",
-    "type": "Potion",
-    "requiredLevel": 47,
-    "skillRequired": 285,
-    "role": "both",
-    "priority": 4
-  },
-  {
     "name": "Elixir of Minor Defense",
     "type": "Guardian Elixir",
     "requiredLevel": 1,
     "skillRequired": 1,
     "role": "melee",
-    "priority": 1
-  },
-  {
-    "name": "Elixir of Minor Fortitude",
-    "type": "Guardian Elixir",
-    "requiredLevel": 2,
-    "skillRequired": 50,
-    "role": "melee",
-    "priority": 3
-  },
-  {
-    "name": "Weak Troll's Blood Elixir",
-    "type": "Guardian Elixir",
-    "requiredLevel": 1,
-    "skillRequired": 15,
-    "role": "melee",
-    "priority": 2
-  },
-  {
-    "name": "Elixir of Wisdom",
-    "type": "Guardian Elixir",
-    "requiredLevel": 10,
-    "skillRequired": 90,
-    "role": "spellcaster",
-    "priority": 3
-  },
-  {
-    "name": "Strong Troll's Blood Elixir",
-    "type": "Guardian Elixir",
-    "requiredLevel": 15,
-    "skillRequired": 125,
-    "role": "melee",
-    "priority": 2
-  },
-  {
-    "name": "Elixir of Defense",
-    "type": "Guardian Elixir",
-    "requiredLevel": 16,
-    "skillRequired": 130,
-    "role": "melee",
-    "priority": 1
-  },
-  {
-    "name": "Elixir of Water Breathing",
-    "type": "Guardian Elixir",
-    "requiredLevel": 8,
-    "skillRequired": 90,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Fortitude",
-    "type": "Guardian Elixir",
-    "requiredLevel": 25,
-    "skillRequired": 175,
-    "role": "both",
-    "priority": 3
-  },
-  {
-    "name": "Catseye Elixir",
-    "type": "Guardian Elixir",
-    "requiredLevel": 30,
-    "skillRequired": 200,
-    "role": "spellcaster",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Greater Defense",
-    "type": "Guardian Elixir",
-    "requiredLevel": 29,
-    "skillRequired": 195,
-    "role": "melee",
-    "priority": 1
-  },
-  {
-    "name": "Elixir of Greater Intellect",
-    "type": "Guardian Elixir",
-    "requiredLevel": 37,
-    "skillRequired": 235,
-    "role": "spellcaster",
-    "priority": 2
-  },
-  {
-    "name": "Elixir of Greater Water Breathing",
-    "type": "Guardian Elixir",
-    "requiredLevel": 35,
-    "skillRequired": 215,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Detect Lesser Invisibility",
-    "type": "Guardian Elixir",
-    "requiredLevel": 29,
-    "skillRequired": 195,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Detect Undead",
-    "type": "Guardian Elixir",
-    "requiredLevel": 36,
-    "skillRequired": 230,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Detect Demon",
-    "type": "Guardian Elixir",
-    "requiredLevel": 40,
-    "skillRequired": 250,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Dream Vision",
-    "type": "Guardian Elixir",
-    "requiredLevel": 38,
-    "skillRequired": 240,
-    "role": "both",
-    "priority": 5
-  },
-  {
-    "name": "Elixir of Superior Defense",
-    "type": "Guardian Elixir",
-    "requiredLevel": 43,
-    "skillRequired": 265,
-    "role": "melee",
-    "priority": 1
-  },
-  {
-    "name": "Elixir of the Sages",
-    "type": "Guardian Elixir",
-    "requiredLevel": 44,
-    "skillRequired": 270,
-    "role": "spellcaster",
-    "priority": 1
-  },
-  {
-    "name": "Mighty Troll's Blood Elixir",
-    "type": "Guardian Elixir",
-    "requiredLevel": 26,
-    "skillRequired": 300,
-    "role": "melee",
-    "priority": 2
+    "priority": 1,
+    "ingredients": [
+      {
+        "name": "Silverleaf",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Lion's Strength",
@@ -517,7 +23,131 @@
     "requiredLevel": 1,
     "skillRequired": 1,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Earthroot",
+        "quantity": 1
+      },
+      {
+        "name": "Silverleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Minor Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 1,
+    "skillRequired": 1,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Peacebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Silverleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Weak Troll's Blood Elixir",
+    "type": "Guardian Elixir",
+    "requiredLevel": 1,
+    "skillRequired": 15,
+    "role": "melee",
+    "priority": 2,
+    "ingredients": [
+      {
+        "name": "Peacebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Earthroot",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Minor Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 5,
+    "skillRequired": 25,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mageroyal",
+        "quantity": 1
+      },
+      {
+        "name": "Silverleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Minor Rejuvenation Potion",
+    "type": "Potion",
+    "requiredLevel": 5,
+    "skillRequired": 40,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mageroyal",
+        "quantity": 2
+      },
+      {
+        "name": "Peacebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Minor Fortitude",
+    "type": "Guardian Elixir",
+    "requiredLevel": 2,
+    "skillRequired": 50,
+    "role": "both",
+    "priority": 3,
+    "ingredients": [
+      {
+        "name": "Earthroot",
+        "quantity": 2
+      },
+      {
+        "name": "Peacebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Minor Agility",
@@ -525,7 +155,115 @@
     "requiredLevel": 2,
     "skillRequired": 50,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Swiftthistle",
+        "quantity": 1
+      },
+      {
+        "name": "Silverleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Discolored Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 5,
+    "skillRequired": 50,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Discolored Worg Heart",
+        "quantity": 1
+      },
+      {
+        "name": "Peacebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lesser Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 3,
+    "skillRequired": 55,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Minor Healing Potion",
+        "quantity": 1
+      },
+      {
+        "name": "Briarthorn",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Swiftness Potion",
+    "type": "Potion",
+    "requiredLevel": 5,
+    "skillRequired": 60,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Swiftthistle",
+        "quantity": 1
+      },
+      {
+        "name": "Briarthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Rage Potion",
+    "type": "Potion",
+    "requiredLevel": 4,
+    "skillRequired": 60,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Sharp Claw",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Blackmouth Oil",
+    "type": "Crafting Material",
+    "requiredLevel": 0,
+    "skillRequired": 80,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Oily Blackmouth",
+        "quantity": 2
+      }
+    ]
   },
   {
     "name": "Elixir of Giant Growth",
@@ -533,7 +271,299 @@
     "requiredLevel": 8,
     "skillRequired": 90,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Deviate Fish",
+        "quantity": 1
+      },
+      {
+        "name": "Earthroot",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Water Breathing",
+    "type": "Guardian Elixir",
+    "requiredLevel": 8,
+    "skillRequired": 90,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Blackmouth Oil",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Wisdom",
+    "type": "Guardian Elixir",
+    "requiredLevel": 10,
+    "skillRequired": 90,
+    "role": "spellcaster",
+    "priority": 3,
+    "ingredients": [
+      {
+        "name": "Mageroyal",
+        "quantity": 1
+      },
+      {
+        "name": "Briarthorn",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Holy Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 10,
+    "skillRequired": 100,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Bruiseweed",
+        "quantity": 1
+      },
+      {
+        "name": "Swiftthistle",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Swim Speed Potion",
+    "type": "Potion",
+    "requiredLevel": 5,
+    "skillRequired": 100,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Swiftthistle",
+        "quantity": 1
+      },
+      {
+        "name": "Blackmouth Oil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 12,
+    "skillRequired": 110,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Bruiseweed",
+        "quantity": 1
+      },
+      {
+        "name": "Briarthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Minor Magic Resistance Potion",
+    "type": "Potion",
+    "requiredLevel": 0,
+    "skillRequired": 110,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mageroyal",
+        "quantity": 3
+      },
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lesser Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 14,
+    "skillRequired": 120,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mageroyal",
+        "quantity": 1
+      },
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Potion of Curing",
+    "type": "Potion",
+    "requiredLevel": 0,
+    "skillRequired": 120,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Large Venom Sac",
+        "quantity": 1
+      },
+      {
+        "name": "Bruiseweed",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Strong Troll's Blood Elixir",
+    "type": "Guardian Elixir",
+    "requiredLevel": 15,
+    "skillRequired": 125,
+    "role": "melee",
+    "priority": 2,
+    "ingredients": [
+      {
+        "name": "Bruiseweed",
+        "quantity": 2
+      },
+      {
+        "name": "Briarthorn",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fire Oil",
+    "type": "Crafting Material",
+    "requiredLevel": 0,
+    "skillRequired": 130,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Firefin Snapper",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Defense",
+    "type": "Guardian Elixir",
+    "requiredLevel": 16,
+    "skillRequired": 130,
+    "role": "melee",
+    "priority": 1,
+    "ingredients": [
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Minor Accuracy",
+    "type": "Battle Elixir",
+    "requiredLevel": 0,
+    "skillRequired": 135,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Fire Oil",
+        "quantity": 1
+      },
+      {
+        "name": "Bruiseweed",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Shadow Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 17,
+    "skillRequired": 135,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Grave Moss",
+        "quantity": 1
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Firepower",
@@ -541,7 +571,21 @@
     "requiredLevel": 18,
     "skillRequired": 140,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Fire Oil",
+        "quantity": 2
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Lesser Agility",
@@ -549,7 +593,21 @@
     "requiredLevel": 18,
     "skillRequired": 140,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Swiftthistle",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Ogre's Strength",
@@ -557,7 +615,197 @@
     "requiredLevel": 20,
     "skillRequired": 150,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Earthroot",
+        "quantity": 1
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Free Action Potion",
+    "type": "Potion",
+    "requiredLevel": 20,
+    "skillRequired": 150,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Blackmouth Oil",
+        "quantity": 2
+      },
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 22,
+    "skillRequired": 160,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Fire Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 23,
+    "skillRequired": 165,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Small Flame Sac",
+        "quantity": 1
+      },
+      {
+        "name": "Fire Oil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lesser Invisibility Potion",
+    "type": "Potion",
+    "requiredLevel": 23,
+    "skillRequired": 165,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Fadeleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Shadow Oil",
+    "type": "Item Enhancement",
+    "requiredLevel": 0,
+    "skillRequired": 165,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Fadeleaf",
+        "quantity": 4
+      },
+      {
+        "name": "Grave Moss",
+        "quantity": 4
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Fortitude",
+    "type": "Guardian Elixir",
+    "requiredLevel": 25,
+    "skillRequired": 175,
+    "role": "both",
+    "priority": 3,
+    "ingredients": [
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Great Rage Potion",
+    "type": "Potion",
+    "requiredLevel": 25,
+    "skillRequired": 175,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Large Fang",
+        "quantity": 1
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Mighty Troll's Blood Elixir",
+    "type": "Guardian Elixir",
+    "requiredLevel": 26,
+    "skillRequired": 180,
+    "role": "melee",
+    "priority": 2,
+    "ingredients": [
+      {
+        "name": "Liferoot",
+        "quantity": 1
+      },
+      {
+        "name": "Bruiseweed",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Agility",
@@ -565,7 +813,21 @@
     "requiredLevel": 27,
     "skillRequired": 185,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Frost Power",
@@ -573,7 +835,445 @@
     "requiredLevel": 28,
     "skillRequired": 190,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dragon's Teeth",
+        "quantity": 2
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Frost Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 28,
+    "skillRequired": 190,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dragon's Teeth",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Nature Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 28,
+    "skillRequired": 190,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Liferoot",
+        "quantity": 1
+      },
+      {
+        "name": "Stranglekelp",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Detect Lesser Invisibility",
+    "type": "Guardian Elixir",
+    "requiredLevel": 29,
+    "skillRequired": 195,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Fadeleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Greater Defense",
+    "type": "Guardian Elixir",
+    "requiredLevel": 29,
+    "skillRequired": 195,
+    "role": "melee",
+    "priority": 1,
+    "ingredients": [
+      {
+        "name": "Wild Steelbloom",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Catseye Elixir",
+    "type": "Guardian Elixir",
+    "requiredLevel": 30,
+    "skillRequired": 200,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Fadeleaf",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Frost Oil",
+    "type": "Item Enhancement",
+    "requiredLevel": 0,
+    "skillRequired": 200,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dragon's Teeth",
+        "quantity": 1
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 31,
+    "skillRequired": 205,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Oil of Immolation",
+    "type": "Item Enhancement",
+    "requiredLevel": 0,
+    "skillRequired": 205,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Firebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Goblin Rocket Fuel",
+    "type": "Crafting Material",
+    "requiredLevel": 0,
+    "skillRequired": 210,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Firebloom",
+        "quantity": 1
+      },
+      {
+        "name": "Volatile Rum",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Magic Resistance Potion",
+    "type": "Potion",
+    "requiredLevel": 0,
+    "skillRequired": 210,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Purple Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Greater Water Breathing",
+    "type": "Guardian Elixir",
+    "requiredLevel": 35,
+    "skillRequired": 215,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Ichor of Undeath",
+        "quantity": 1
+      },
+      {
+        "name": "Purple Lotus",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Lesser Stoneshield Potion",
+    "type": "Potion",
+    "requiredLevel": 33,
+    "skillRequired": 215,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mithril Ore",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Restorative Potion",
+    "type": "Potion",
+    "requiredLevel": 32,
+    "skillRequired": 215,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Elemental Earth",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Superior Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 35,
+    "skillRequired": 215,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Sungrass",
+        "quantity": 1
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Philosopher's Stone",
+    "type": "Trinket",
+    "requiredLevel": 35,
+    "skillRequired": 225,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Iron Bar",
+        "quantity": 4
+      },
+      {
+        "name": "Black Vitriol",
+        "quantity": 1
+      },
+      {
+        "name": "Purple Lotus",
+        "quantity": 4
+      },
+      {
+        "name": "Firebloom",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "name": "Wildvine Potion",
+    "type": "Potion",
+    "requiredLevel": 35,
+    "skillRequired": 225,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Wildvine",
+        "quantity": 1
+      },
+      {
+        "name": "Purple Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Transmute: Iron to Gold",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 225,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Iron Bar",
+        "quantity": 1
+      }
+    ],
+    "output": "Gold Bar",
+    "cooldown": "20 hours"
+  },
+  {
+    "name": "Transmute: Mithril to Truesilver",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 225,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mithril Bar",
+        "quantity": 1
+      }
+    ],
+    "output": "Truesilver Bar",
+    "cooldown": "20 hours"
+  },
+  {
+    "name": "Elixir of Detect Undead",
+    "type": "Guardian Elixir",
+    "requiredLevel": 36,
+    "skillRequired": 230,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Arthas' Tears",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Dreamless Sleep Potion",
+    "type": "Potion",
+    "requiredLevel": 35,
+    "skillRequired": 230,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Purple Lotus",
+        "quantity": 3
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Arcane Elixir",
@@ -581,7 +1281,65 @@
     "requiredLevel": 37,
     "skillRequired": 235,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Blindweed",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Greater Intellect",
+    "type": "Guardian Elixir",
+    "requiredLevel": 37,
+    "skillRequired": 235,
+    "role": "spellcaster",
+    "priority": 2,
+    "ingredients": [
+      {
+        "name": "Blindweed",
+        "quantity": 1
+      },
+      {
+        "name": "Khadgar's Whisker",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Invisibility Potion",
+    "type": "Potion",
+    "requiredLevel": 37,
+    "skillRequired": 235,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Ghost Mushroom",
+        "quantity": 1
+      },
+      {
+        "name": "Sungrass",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Greater Agility",
@@ -589,7 +1347,61 @@
     "requiredLevel": 38,
     "skillRequired": 240,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Sungrass",
+        "quantity": 1
+      },
+      {
+        "name": "Goldthorn",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Gift of Arthas",
+    "type": "Potion",
+    "requiredLevel": 38,
+    "skillRequired": 240,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Arthas' Tears",
+        "quantity": 1
+      },
+      {
+        "name": "Blindweed",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Dream Vision",
+    "type": "Guardian Elixir",
+    "requiredLevel": 38,
+    "skillRequired": 240,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Purple Lotus",
+        "quantity": 3
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Giants",
@@ -597,7 +1409,43 @@
     "requiredLevel": 38,
     "skillRequired": 245,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Sungrass",
+        "quantity": 1
+      },
+      {
+        "name": "Gromsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Ghost Dye",
+    "type": "Crafting Material",
+    "requiredLevel": 0,
+    "skillRequired": 245,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Ghost Mushroom",
+        "quantity": 2
+      },
+      {
+        "name": "Purple Dye",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Shadow Power",
@@ -605,7 +1453,17 @@
     "requiredLevel": 40,
     "skillRequired": 250,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Ghost Mushroom",
+        "quantity": 3
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Demonslaying",
@@ -613,7 +1471,21 @@
     "requiredLevel": 40,
     "skillRequired": 250,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Ghost Mushroom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of Greater Firepower",
@@ -621,7 +1493,315 @@
     "requiredLevel": 40,
     "skillRequired": 250,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Fire Oil",
+        "quantity": 3
+      },
+      {
+        "name": "Firebloom",
+        "quantity": 3
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Limited Invulnerability Potion",
+    "type": "Potion",
+    "requiredLevel": 45,
+    "skillRequired": 250,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Blindweed",
+        "quantity": 2
+      },
+      {
+        "name": "Ghost Mushroom",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Detect Demon",
+    "type": "Guardian Elixir",
+    "requiredLevel": 40,
+    "skillRequired": 250,
+    "role": "both",
+    "priority": 5,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Stonescale Oil",
+    "type": "Crafting Material",
+    "requiredLevel": 0,
+    "skillRequired": 250,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Stonescale Eel",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Superior Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 41,
+    "skillRequired": 260,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Sungrass",
+        "quantity": 2
+      },
+      {
+        "name": "Blindweed",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of Superior Defense",
+    "type": "Guardian Elixir",
+    "requiredLevel": 43,
+    "skillRequired": 265,
+    "role": "melee",
+    "priority": 1,
+    "ingredients": [
+      {
+        "name": "Stonescale Oil",
+        "quantity": 2
+      },
+      {
+        "name": "Sungrass",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Elixir of the Sages",
+    "type": "Guardian Elixir",
+    "requiredLevel": 44,
+    "skillRequired": 270,
+    "role": "spellcaster",
+    "priority": 1,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Transmute: Arcanite",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Thorium Bar",
+        "quantity": 1
+      },
+      {
+        "name": "Arcane Crystal",
+        "quantity": 1
+      }
+    ],
+    "output": "Arcanite Bar",
+    "cooldown": "48 hours"
+  },
+  {
+    "name": "Transmute: Fire to Earth",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Fire",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Earth",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Water to Air",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Water",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Air",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Major Mana Potion",
+    "type": "Potion",
+    "requiredLevel": 49,
+    "skillRequired": 295,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 3
+      },
+      {
+        "name": "Icecap",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Transmute: Air to Fire",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Air",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Fire",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Earth to Water",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Earth",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Water",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Undeath to Water",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Undeath",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Water",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Water to Undeath",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Water",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Undeath",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Life to Earth",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Living Essence",
+        "quantity": 1
+      }
+    ],
+    "output": "Essence of Earth",
+    "cooldown": "24 hours"
+  },
+  {
+    "name": "Transmute: Earth to Life",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Essence of Earth",
+        "quantity": 1
+      }
+    ],
+    "output": "Living Essence",
+    "cooldown": "24 hours"
   },
   {
     "name": "Elixir of Brute Force",
@@ -629,7 +1809,109 @@
     "requiredLevel": 45,
     "skillRequired": 275,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 2
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Major Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 45,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Golden Sansam",
+        "quantity": 2
+      },
+      {
+        "name": "Mountain Silversage",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Mageblood Potion",
+    "type": "Guardian Elixir",
+    "requiredLevel": 40,
+    "skillRequired": 275,
+    "role": "spellcaster",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Dreamless Sleep Potion",
+    "type": "Potion",
+    "requiredLevel": 55,
+    "skillRequired": 275,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 2
+      },
+      {
+        "name": "Golden Sansam",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Stoneshield Potion",
+    "type": "Potion",
+    "requiredLevel": 46,
+    "skillRequired": 280,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Stonescale Oil",
+        "quantity": 3
+      },
+      {
+        "name": "Thorium Ore",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Elixir of the Mongoose",
@@ -637,7 +1919,39 @@
     "requiredLevel": 46,
     "skillRequired": 280,
     "role": "melee",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Mountain Silversage",
+        "quantity": 2
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Mighty Rage Potion",
+    "type": "Potion",
+    "requiredLevel": 46,
+    "skillRequired": 255,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 3
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Greater Arcane Elixir",
@@ -645,39 +1959,249 @@
     "requiredLevel": 47,
     "skillRequired": 285,
     "role": "spellcaster",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 3
+      },
+      {
+        "name": "Mountain Silversage",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
-    "name": "Flask of the Titans",
-    "type": "Flask",
-    "requiredLevel": 50,
-    "skillRequired": 300,
+    "name": "Living Action Potion",
+    "type": "Potion",
+    "requiredLevel": 47,
+    "skillRequired": 285,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Icecap",
+        "quantity": 2
+      },
+      {
+        "name": "Mountain Silversage",
+        "quantity": 2
+      },
+      {
+        "name": "Heart of the Wild",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Fire Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Elemental Fire",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Frost Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Elemental Water",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Nature Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Elemental Earth",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Arcane Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dream Dust",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Shadow Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Shadow Oil",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Greater Holy Protection Potion",
+    "type": "Potion",
+    "requiredLevel": 48,
+    "skillRequired": 290,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Ichor of Undeath",
+        "quantity": 1
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Major Troll's Blood Potion",
+    "type": "Guardian Elixir",
+    "requiredLevel": 53,
+    "skillRequired": 290,
     "role": "melee",
-    "priority": 4
+    "priority": 2,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
-    "name": "Flask of Distilled Wisdom",
-    "type": "Flask",
-    "requiredLevel": 50,
-    "skillRequired": 300,
-    "role": "spellcaster",
-    "priority": 4
+    "name": "Purification Potion",
+    "type": "Potion",
+    "requiredLevel": 47,
+    "skillRequired": 285,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Icecap",
+        "quantity": 2
+      },
+      {
+        "name": "Sorrowmoss",
+        "quantity": 2
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
-    "name": "Flask of Supreme Power",
-    "type": "Flask",
-    "requiredLevel": 50,
-    "skillRequired": 300,
-    "role": "spellcaster",
-    "priority": 4
-  },
-  {
-    "name": "Flask of Chromatic Resistance",
-    "type": "Flask",
+    "name": "Major Rejuvenation Potion",
+    "type": "Potion",
     "requiredLevel": 50,
     "skillRequired": 300,
     "role": "both",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Heart of the Wild",
+        "quantity": 1
+      },
+      {
+        "name": "Golden Sansam",
+        "quantity": 4
+      },
+      {
+        "name": "Dreamfoil",
+        "quantity": 4
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
   },
   {
     "name": "Flask of Petrification",
@@ -685,6 +2209,162 @@
     "requiredLevel": 50,
     "skillRequired": 300,
     "role": "both",
-    "priority": 4
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Stonescale Oil",
+        "quantity": 7
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Flask of the Titans",
+    "type": "Flask",
+    "requiredLevel": 50,
+    "skillRequired": 300,
+    "role": "melee",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Gromsblood",
+        "quantity": 7
+      },
+      {
+        "name": "Stonescale Oil",
+        "quantity": 3
+      },
+      {
+        "name": "Black Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Flask of Distilled Wisdom",
+    "type": "Flask",
+    "requiredLevel": 50,
+    "skillRequired": 300,
+    "role": "spellcaster",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 7
+      },
+      {
+        "name": "Icecap",
+        "quantity": 3
+      },
+      {
+        "name": "Black Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Flask of Supreme Power",
+    "type": "Flask",
+    "requiredLevel": 50,
+    "skillRequired": 300,
+    "role": "spellcaster",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Dreamfoil",
+        "quantity": 7
+      },
+      {
+        "name": "Mountain Silversage",
+        "quantity": 3
+      },
+      {
+        "name": "Black Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Flask of Chromatic Resistance",
+    "type": "Flask",
+    "requiredLevel": 50,
+    "skillRequired": 300,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Icecap",
+        "quantity": 7
+      },
+      {
+        "name": "Mountain Silversage",
+        "quantity": 3
+      },
+      {
+        "name": "Black Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Crystal Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "name": "Transmute: Elemental Fire",
+    "type": "Transmute",
+    "requiredLevel": 0,
+    "skillRequired": 300,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Heart of Fire",
+        "quantity": 1
+      }
+    ],
+    "output": "Elemental Fire",
+    "cooldown": "10 minutes"
+  },
+  {
+    "name": "Gurubashi Mojo Madness",
+    "type": "Potion",
+    "requiredLevel": 60,
+    "skillRequired": 300,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Blood of Heroes",
+        "quantity": 1
+      },
+      {
+        "name": "Black Lotus",
+        "quantity": 1
+      },
+      {
+        "name": "Massive Mojo",
+        "quantity": 1
+      },
+      {
+        "name": "Powerful Mojo",
+        "quantity": 6
+      }
+    ]
   }
 ]

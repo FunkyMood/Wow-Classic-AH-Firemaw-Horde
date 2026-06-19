@@ -89,13 +89,14 @@ export function registerCommands(bot, supabase) {
 
         const categories = [...new Set(data.map(i => i.category).filter(Boolean))].sort()
 
-        const buttons = categories.map(cat => ([{
+        const alchemyButton = [[{ text: '⚗️ Alchemy Professions', callback_data: 'profession_alchemy' }]]
+        const categoryButtons = categories.map(cat => ([{
             text: cat,
             callback_data: `browse_${cat}`
         }]))
 
         bot.sendMessage(chatID, '📂 Select a category:', {
-            reply_markup: { inline_keyboard: buttons }
+            reply_markup: { inline_keyboard: [...alchemyButton, ...categoryButtons] }
         })
     })
 
@@ -166,7 +167,95 @@ export function registerCommands(bot, supabase) {
 
     bot.on('callback_query', async (query) => {
         const chatID = query.message.chat.id
+        if (query.data === 'profession_alchemy') {
+            const skillRanges = [
+                { label: '1-74 (Apprentice)', min: 1, max: 74 },
+                { label: '75-149 (Journeyman)', min: 75, max: 149 },
+                { label: '150-224 (Expert)', min: 150, max: 224 },
+                { label: '225-300 (Artisan)', min: 225, max: 300 },
+            ]
 
+            const buttons = skillRanges.map(range => ([{
+                text: range.label,
+                callback_data: `alchemy_profit_${range.min}_${range.max}`
+            }]))
+
+            bot.sendMessage(chatID, '⚗️ Select your Alchemy skill range:', {
+                reply_markup: { inline_keyboard: buttons }
+            })
+            bot.answerCallbackQuery(query.id)
+            return
+        }
+
+        if (query.data.startsWith('alchemy_profit_')) {
+            const parts = query.data.replace('alchemy_profit_', '').split('_')
+            const minSkill = parseInt(parts[0])
+            const maxSkill = parseInt(parts[1])
+
+            const VENDOR_ITEMS = ['Crystal Vial', 'Leaded Vial', 'Imbued Vial', 'Empty Vial']
+            const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
+
+            const inRange = recipes.filter(r => r.skillRequired >= minSkill && r.skillRequired <= maxSkill)
+
+            const results = []
+
+            for (const recipe of inRange) {
+                const { data: productData } = await supabase
+                    .from('items')
+                    .select('price, name')
+                    .ilike('name', recipe.name)
+                    .limit(1)
+
+                if (!productData || productData.length === 0) continue
+
+                const sellPrice = productData[0].price
+                if (!sellPrice || sellPrice === 0) continue
+
+                const ingredients = recipe.ingredients.filter(i => !VENDOR_ITEMS.includes(i.name))
+
+                let totalCost = 0
+                let canCalculate = true
+
+                for (const ingredient of ingredients) {
+                    const { data: ingData } = await supabase
+                        .from('items')
+                        .select('price')
+                        .ilike('name', ingredient.name)
+                        .limit(1)
+
+                    if (!ingData || ingData.length === 0 || !ingData[0].price) {
+                        canCalculate = false
+                        break
+                    }
+
+                    totalCost += ingData[0].price * ingredient.quantity
+                }
+
+                if (!canCalculate) continue
+
+                const profit = sellPrice - totalCost
+                results.push({ name: recipe.name, profit, sellPrice, totalCost })
+            }
+
+            if (results.length === 0) {
+                bot.sendMessage(chatID, `❌ No calculable recipes in this skill range.`)
+                bot.answerCallbackQuery(query.id)
+                return
+            }
+
+            const top5 = results.sort((a, b) => b.profit - a.profit).slice(0, 5)
+
+            const message = top5.map((r, i) => {
+                const profitStr = r.profit >= 0
+                    ? `✅ +${Utility.copperToGold(r.profit)}`
+                    : `❌ ${Utility.copperToGold(Math.abs(r.profit))}`
+                return `${i + 1}. ${r.name}\n💰 Sell: ${Utility.copperToGold(r.sellPrice)} | Cost: ${Utility.copperToGold(r.totalCost)}\n${profitStr}`
+            }).join('\n\n')
+
+            bot.sendMessage(chatID, `⚗️ Top 5 most profitable recipes (skill ${minSkill}-${maxSkill}):\n\n${message}`)
+            bot.answerCallbackQuery(query.id)
+            return
+        }
         if (query.data.startsWith('browse_') && !query.data.includes('_lvl_')) {
             const category = query.data.replace('browse_', '')
 
