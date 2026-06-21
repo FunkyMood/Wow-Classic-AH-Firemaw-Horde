@@ -136,7 +136,7 @@ export function registerCommands(bot, supabase) {
         bot.sendMessage(chatID, `⚗️ Best consumables for level ${level}:\n\n${lines.join('\n')}`)
     })
 
-    bot.onText(/\/sharegold (\d+)g (\d+)s (\d+)/, (msg, match) => {
+    bot.onText(/\/sharegold (\d+) (\d+) (\d+)/, (msg, match) => {
         const chatID = msg.chat.id
         const gold = parseInt(match[1])
         const silver = parseInt(match[2])
@@ -195,7 +195,11 @@ export function registerCommands(bot, supabase) {
             const VENDOR_ITEMS = ['Crystal Vial', 'Leaded Vial', 'Imbued Vial', 'Empty Vial']
             const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
 
-            const inRange = recipes.filter(r => r.skillRequired >= minSkill && r.skillRequired <= maxSkill)
+            const inRange = recipes.filter(r =>
+                r.skillRequired >= minSkill &&
+                r.skillRequired <= maxSkill &&
+                !(minSkill === 225 && r.type === 'Flask')
+            )
 
             const results = []
 
