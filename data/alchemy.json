@@ -398,6 +398,28 @@
     ]
   },
   {
+    "name": "Greater Healing Potion",
+    "type": "Potion",
+    "requiredLevel": 21,
+    "skillRequired": 155,
+    "role": "both",
+    "priority": 4,
+    "ingredients": [
+      {
+        "name": "Liferoot",
+        "quantity": 1
+      },
+      {
+        "name": "Kingsblood",
+        "quantity": 1
+      },
+      {
+        "name": "Leaded Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
     "name": "Minor Magic Resistance Potion",
     "type": "Potion",
     "requiredLevel": 0,
