@@ -106,7 +106,7 @@ After every AH scan with AHDB in-game:
 2. Run the sync script:
 
 ```bash
-node sync.js
+node src/sync.js
 ```
 
 Or use the `sync.bat` shortcut on your desktop (Windows only).
@@ -114,17 +114,15 @@ Or use the `sync.bat` shortcut on your desktop (Windows only).
 The script reads `AuctionDB.lua`, parses all auction data, and uploads it to Supabase via Render.
 
 ## Project structure
-├── index.js        # Telegram bot + HTTP server for sync endpoint
+├── src/
+│   ├── index.js        # Telegram bot + HTTP server for sync endpoint
+│   ├── command.js      # All bot command handlers
+│   ├── sync.js         # Local script to parse and upload AH data
+│   ├── parseAHDB.js    # Parser for AuctionDB.lua file format
+│   └── utilities.js    # Utility functions (copperToGold, getSyncTimeLabel)
 
-├── command.js      # All bot command handlers
-
-├── sync.js         # Local script to parse and upload AH data
-
-├── parseAHDB.js    # Parser for AuctionDB.lua file format
-
-├── utilities.js    # Utility functions (copperToGold, getSyncTimeLabel)
-
-├── alchemy.json    # Static alchemy recipes database (potions, elixirs, flasks)
+├── data/
+│   └── alchemy.json    # Static alchemy recipes database (potions, elixirs, flasks)
 
 ├── sync.bat        # Windows shortcut for quick sync from desktop
 

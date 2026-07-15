@@ -1,5 +1,9 @@
 import { Utility } from './utilities.js'
 import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const ALCHEMY_JSON_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data', 'alchemy.json')
 
 export function registerCommands(bot, supabase) {
 
@@ -104,7 +108,7 @@ export function registerCommands(bot, supabase) {
         const chatID = msg.chat.id
         const level = parseInt(match[1])
 
-        const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
+        const recipes = JSON.parse(fs.readFileSync(ALCHEMY_JSON_PATH, 'utf8'))
 
         const getBest = (filterFn) => {
             const available = recipes
@@ -193,7 +197,7 @@ export function registerCommands(bot, supabase) {
             const maxSkill = parseInt(parts[1])
 
             const VENDOR_ITEMS = ['Crystal Vial', 'Leaded Vial', 'Imbued Vial', 'Empty Vial']
-            const recipes = JSON.parse(fs.readFileSync('./alchemy.json', 'utf8'))
+            const recipes = JSON.parse(fs.readFileSync(ALCHEMY_JSON_PATH, 'utf8'))
 
             const inRange = recipes.filter(r =>
                 r.skillRequired >= minSkill &&
