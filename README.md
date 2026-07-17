@@ -119,7 +119,7 @@ The script reads `AuctionDB.lua`, parses all auction data, and uploads it to Sup
 │   ├── command.js      # All bot command handlers
 │   ├── sync.js         # Local script to parse and upload AH data
 │   ├── parseAHDB.js    # Parser for AuctionDB.lua file format
-│   └── utilities.js    # Utility functions (copperToGold, getSyncTimeLabel)
+│   └── utilities.js    # Utility functions (copperToGold)
 
 ├── data/
 │   └── alchemy.json    # Static alchemy recipes database (potions, elixirs, flasks)

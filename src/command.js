@@ -45,8 +45,7 @@ export function registerCommands(bot, supabase) {
                 bot.sendMessage(chatID,
                     `📦 ${item.name}\n` +
                     `💰 Min Buyout: ${Utility.copperToGold(item.price)}\n` +
-                    `🔢 Quantity: ${item.quantity}\n` +
-                    `${Utility.getSyncTimeLabel(new Date(item.last_sync))}`
+                    `🔢 Quantity: ${item.quantity}\n`
                 )
                 return
             }
@@ -355,8 +354,7 @@ export function registerCommands(bot, supabase) {
             bot.sendMessage(chatID,
                 `📦 ${item.name}\n` +
                 `💰 Min Buyout: ${Utility.copperToGold(item.price)}\n` +
-                `🔢 Quantity: ${item.quantity}\n` +
-                `${Utility.getSyncTimeLabel(new Date(item.last_sync))}`
+                `🔢 Quantity: ${item.quantity}\n`
             )
             bot.answerCallbackQuery(query.id)
         } catch (err) {
